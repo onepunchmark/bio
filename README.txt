@@ -1,19 +1,19 @@
-ONE PUNCH MARK HUB – VERSION 5
+ONE PUNCH MARK HUB – VERSION 6
 
-NEU:
-- Echtes Gamers-Only-Partnerbild
-- Naruto Yellow Chakra Produktgrafik
-- Lebendiger Gutscheinbereich mit Animation und Glow
-- Echte TikTok-, Instagram- und YouTube-SVG-Logos
+WICHTIGE ÄNDERUNG:
+Alle Bilder liegen jetzt direkt neben index.html.
+Es gibt keinen assets-Ordner mehr. Dadurch werden die Bilder auf GitHub zuverlässiger angezeigt.
 
 UPLOAD:
 1. ZIP entpacken.
-2. GitHub-Repository öffnen.
-3. Add file → Upload files.
-4. ALLE Dateien sowie den Ordner assets hochladen.
-5. Vorhandene Dateien ersetzen.
-6. Commit changes bestätigen.
-7. 1–3 Minuten warten und die Seite neu laden.
+2. Im GitHub-Repository: Add file → Upload files.
+3. ALLE entpackten Dateien gemeinsam hochladen.
+4. Commit directly to the main branch auswählen.
+5. Commit changes anklicken.
+6. 2–5 Minuten warten.
+7. Seite mit Strg + F5 neu laden oder im privaten Browserfenster öffnen.
 
-WICHTIG:
-Der Ordner assets muss mit hochgeladen werden.
+Die Produktgrafik heißt:
+gamers-naruto.png
+
+Sie muss im Repository direkt neben index.html sichtbar sein.
