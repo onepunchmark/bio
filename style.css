@@ -572,3 +572,193 @@ body:after{left:84%;font-size:13px;animation-delay:-8s;animation-duration:20s}
 @media(prefers-reduced-motion:reduce){
   *,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}
 }
+
+
+/* =========================================================
+   VERSION 8 — refined copy + stronger anime impact
+   ========================================================= */
+
+.partner-line{justify-content:flex-start}
+.partner-line .partner-badge{width:min(310px,86%);max-height:68px}
+
+/* stronger anime punch sequence */
+.impact-layer.active{
+  background:
+    radial-gradient(circle at 50% 50%,rgba(255,255,255,.12),transparent 16%),
+    radial-gradient(circle at 50% 50%,rgba(147,55,255,.17),transparent 42%)
+}
+.punch-runup{
+  position:absolute;inset:0;overflow:hidden;opacity:0
+}
+.impact-layer.active .punch-runup{animation:runupReveal .65s ease .05s both}
+@keyframes runupReveal{
+  0%{opacity:0}
+  28%{opacity:1}
+  100%{opacity:0}
+}
+.speedline{
+  position:absolute;left:-15%;top:50%;height:5px;width:70%;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.95),transparent);
+  transform-origin:right center;
+  filter:drop-shadow(0 0 8px #bb6bff)
+}
+.sline1{top:18%;transform:rotate(8deg) scaleX(1.1)}
+.sline2{top:32%;transform:rotate(4deg) scaleX(.9)}
+.sline3{top:50%;transform:rotate(0deg) scaleX(1.3)}
+.sline4{top:68%;transform:rotate(-5deg) scaleX(1.05)}
+.sline5{top:82%;transform:rotate(-9deg) scaleX(.8)}
+
+.opm-fist{
+  position:absolute;
+  left:-42vw;
+  top:53%;
+  width:320px;
+  height:220px;
+  transform-origin:72% 48%;
+  filter:drop-shadow(0 28px 35px rgba(0,0,0,.78));
+  perspective:900px
+}
+.impact-layer.active .opm-fist{
+  animation:cameraPunch 1.15s cubic-bezier(.1,.78,.18,1) both
+}
+@keyframes cameraPunch{
+  0%{
+    left:-42vw;
+    transform:translateY(-50%) rotate(-14deg) scale(.42);
+    filter:blur(2px) drop-shadow(0 20px 20px rgba(0,0,0,.5))
+  }
+  22%{
+    left:4vw;
+    transform:translateY(-50%) rotate(-8deg) scale(.72);
+    filter:blur(0) drop-shadow(0 22px 25px rgba(0,0,0,.65))
+  }
+  52%{
+    left:calc(50% - 190px);
+    transform:translateY(-50%) rotate(1deg) scale(1.45);
+  }
+  60%{
+    left:calc(50% - 210px);
+    transform:translateY(-50%) rotate(-1deg) scale(1.95);
+  }
+  67%{
+    left:calc(50% - 225px);
+    transform:translateY(-50%) rotate(0deg) scale(2.45);
+    filter:blur(.4px) drop-shadow(0 36px 45px rgba(0,0,0,.85))
+  }
+  100%{
+    left:112%;
+    transform:translateY(-50%) rotate(8deg) scale(.95);
+    opacity:.1
+  }
+}
+.forearm{
+  position:absolute;
+  left:-42px;
+  top:68px;
+  width:138px;
+  height:92px;
+  border-radius:52px 18px 18px 52px;
+  background:linear-gradient(145deg,#8037d1,#2f0e57);
+  border:5px solid #1c0b28;
+  transform:rotate(-5deg);
+  z-index:1
+}
+.fist-palm{
+  position:absolute;
+  left:80px;
+  top:48px;
+  width:162px;
+  height:122px;
+  border-radius:45% 48% 44% 40%;
+  background:linear-gradient(145deg,#ffd9c2,#d9916e 72%);
+  border:5px solid #28131a;
+  z-index:4;
+  box-shadow:inset -12px -14px 20px rgba(101,40,26,.18)
+}
+.fist-knuckle{
+  position:absolute;
+  top:2px;
+  width:62px;
+  height:82px;
+  border-radius:46% 46% 36% 36%;
+  background:linear-gradient(145deg,#ffe6d3,#dc9875 74%);
+  border:5px solid #28131a;
+  z-index:5;
+  box-shadow:inset -8px -8px 12px rgba(102,40,28,.14)
+}
+.k1{left:70px;transform:rotate(-8deg)}
+.k2{left:120px;top:-3px}
+.k3{left:170px;top:2px;transform:rotate(6deg)}
+.k4{left:213px;top:18px;transform:rotate(16deg);height:68px}
+.fist-thumb{
+  position:absolute;
+  left:205px;
+  top:86px;
+  width:76px;
+  height:48px;
+  border-radius:50%;
+  background:linear-gradient(145deg,#f7c5aa,#cf805f);
+  border:5px solid #28131a;
+  z-index:6;
+  transform:rotate(-24deg)
+}
+.impact-burst{
+  position:absolute;
+  left:50%;
+  top:50%;
+  width:20px;
+  height:20px;
+  border-radius:50%;
+  opacity:0;
+  transform:translate(-50%,-50%);
+  box-shadow:
+    0 0 0 0 rgba(255,255,255,.95),
+    0 0 0 0 rgba(186,91,255,.7),
+    0 0 90px 40px rgba(255,255,255,.8)
+}
+.impact-layer.active .impact-burst{
+  animation:burstImpact .95s ease .54s both
+}
+@keyframes burstImpact{
+  0%{opacity:0;transform:translate(-50%,-50%) scale(.2)}
+  18%{opacity:1;transform:translate(-50%,-50%) scale(1)}
+  38%{
+    opacity:1;
+    box-shadow:
+      0 0 0 65px rgba(255,255,255,.3),
+      0 0 0 150px rgba(186,91,255,.12),
+      0 0 150px 70px rgba(255,255,255,.9)
+  }
+  100%{
+    opacity:0;
+    transform:translate(-50%,-50%) scale(4.5)
+  }
+}
+.impact-layer.active .crack-svg{
+  animation:crackFade 3s ease .58s both
+}
+.impact-layer.active .crack-svg path{
+  animation:drawCrack .38s cubic-bezier(.2,.8,.2,1) .6s forwards
+}
+.impact-message{
+  bottom:10%;
+  text-shadow:
+    0 0 8px #fff,
+    0 0 22px #8a31ff,
+    0 0 42px rgba(138,49,255,.8)
+}
+.impact-layer.active .impact-message{
+  animation:impactText 2.7s cubic-bezier(.2,.8,.2,1) .68s both
+}
+
+@media(max-width:430px){
+  .opm-fist{
+    width:260px;
+    height:185px
+  }
+  .fist-palm{left:65px;top:42px;width:132px;height:98px}
+  .fist-knuckle{width:50px;height:68px;border-width:4px}
+  .k1{left:58px}.k2{left:98px}.k3{left:138px}.k4{left:174px;top:15px;height:57px}
+  .fist-thumb{left:168px;top:73px;width:62px;height:41px}
+  .forearm{left:-32px;top:58px;width:112px;height:76px}
+}

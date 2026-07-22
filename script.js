@@ -98,8 +98,8 @@ orb?.addEventListener('click', () => {
   orb.style.opacity = String(Math.min(.35 + orbTaps * .13, 1));
   orb.style.transform = `scale(${1 + orbTaps * .05}) rotate(${orbTaps * 35}deg)`;
 
-  if (orbTaps < 5) {
-    showToast(`Dragon Ball Energie: ${orbTaps}/5`);
+  if (orbTaps < 7) {
+    showToast(`Dragon Ball Energie: ${orbTaps}/7`);
   } else {
     orbTaps = 0;
     orb.style.opacity = '';
